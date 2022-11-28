@@ -29,9 +29,7 @@ module.exports = {
     });
   },
   boot({ app, name }) {
-    if (name === 'express') {
-      app.use(i18n.init);
-      app.use(language);
-    }
+    app.use(i18n.init);
+    app.use(language);
   }
 };
