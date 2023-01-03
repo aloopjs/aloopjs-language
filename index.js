@@ -7,7 +7,7 @@ module.exports = {
   register(){
     let directory = __dirname + '/locales';
 
-    if (fs.existsSync(directory)) fs.rmdirSync(directory, {recursive: true});
+    if (fs.existsSync(directory)) fs.rm(directory, {recursive: true});
 
     fs.mkdirSync(directory, 0744);
 

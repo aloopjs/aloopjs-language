@@ -13,7 +13,7 @@ function addHandlers(dir, file){
 }
 
 modules.forEach((el) => {
-  let root = __modulePath(el, 'locales');
+  let root = App.base.modulePath(el, 'locales');
 
   if (fs.existsSync(root)) {
     fs
