@@ -5,7 +5,7 @@ const fs = require('fs');
 
 module.exports = {
   register(){
-    let directory = __dirname + '/locales';
+    let directory = __dirname + '/__cache';
 
     if (fs.existsSync(directory)) fs.rm(directory, {recursive: true});
 
