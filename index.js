@@ -7,7 +7,7 @@ module.exports = {
   register(){
     let directory = __dirname + '/__cache';
 
-    if (fs.existsSync(directory)) fs.rm(directory, {recursive: true});
+    if (fs.existsSync(directory)) fs.rmSync(directory, {recursive: true});
 
     fs.mkdirSync(directory, 0744);
 
