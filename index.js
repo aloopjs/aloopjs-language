@@ -1,5 +1,5 @@
 const i18n = require('i18n');
-const { language } = App.middleware();
+const { language } = Aloop.middleware();
 const messages = require('./reader/language');
 const fs = require('fs');
 

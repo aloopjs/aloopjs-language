@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 let handlers = {};
-const {modules} = App.options;
+const {modules} = Aloop.options;
 
 function addHandlers(dir, file){
   let configData = require(path.join(dir, file));
@@ -13,7 +13,7 @@ function addHandlers(dir, file){
 }
 
 modules.forEach((el) => {
-  let root = App.base.modulePath(el, 'locales');
+  let root = Aloop.base.modulePath(el, 'locales');
 
   if (fs.existsSync(root)) {
     fs
